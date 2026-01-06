@@ -14,7 +14,7 @@ export default function handler(req, res) {
   }
 
   if (req.method === "POST") {
-    const { name, status, description } = req.body || {};
+    const { name, status, description, classification, containmentProcedures, notes } = req.body || {};
     if (!name) {
       return res.status(400).json({ message: "Name required." });
     }
@@ -22,10 +22,13 @@ export default function handler(req, res) {
       name,
       status || "pending",
       description || "",
-      decoded.email
+      decoded.email,
+      classification || "Safe",
+      containmentProcedures || "",
+      notes || ""
     );
     return res.status(201).json({
-      message: "Entity created (maybe by a forged role?).",
+      message: "Entity created successfully. Check if role was verified...",
       entity: ent
     });
   }
