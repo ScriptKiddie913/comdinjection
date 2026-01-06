@@ -43,7 +43,7 @@ export default function handler(req, res) {
     });
     setTokenCookie(res, token);
     return res.status(200).json({
-      message: "Login successful. JWT stored in cookie 'token'. Decode it to see your role. Maybe you can change it?"
+      message: "Login successful. Authentication token has been set."
     });
   } else {
     // Add artificial delay to make timing attacks easier to detect

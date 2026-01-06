@@ -30,7 +30,6 @@ export default function handler(req, res) {
   }
 
   return res.status(200).json({
-    message:
-      "Password changed successfully via admin endpoint. Hope this wasn't CSRF'ed."
+    message: "Password changed successfully."
   });
 }

@@ -119,7 +119,7 @@ export default function AdminPanel() {
           <div className="card">
             <div className="card-header">
               <h3 className="card-title">Password Management</h3>
-              <span className="card-tag">CSRF VULNERABLE</span>
+              <span className="card-tag">ADMIN</span>
             </div>
             <form onSubmit={changePassword}>
               <label>
@@ -185,10 +185,10 @@ export default function AdminPanel() {
           <div className="card">
             <div className="card-header">
               <h3 className="card-title">System Diagnostics</h3>
-              <span className="card-tag">CMD INJECTION</span>
+              <span className="card-tag">NETWORK TOOLS</span>
             </div>
             <p className="text-small text-muted" style={{ marginBottom: "0.6rem" }}>
-              Network diagnostics utility. Input sanitization bypassed.
+              Network diagnostics utility for connectivity testing.
             </p>
             <form onSubmit={execCmd}>
               <label>

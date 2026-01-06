@@ -30,15 +30,15 @@ export default function Home() {
                   STAGE 1: Initial Access
                 </div>
                 <div className="text-muted" style={{ fontSize: "0.82rem" }}>
-                  Bypass authentication controls. Multiple vectors available: login bypass, weak password logic, or registration abuse.
+                  Gain authenticated access to the system through available endpoints.
                 </div>
               </div>
               <div style={{ marginBottom: "1rem", paddingBottom: "1rem", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
                 <div style={{ color: "#ff6b6b", fontWeight: 600, marginBottom: "0.3rem" }}>
-                  STAGE 2: JWT Exploitation
+                  STAGE 2: Token Analysis
                 </div>
                 <div className="text-muted" style={{ fontSize: "0.82rem" }}>
-                  Decode and manipulate JWT tokens. Weak secrets, algorithm confusion, and unverified role claims await exploitation.
+                  Examine authentication mechanisms and session management implementations.
                 </div>
               </div>
               <div style={{ marginBottom: "1rem", paddingBottom: "1rem", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
@@ -46,15 +46,15 @@ export default function Home() {
                   STAGE 3: Privilege Escalation
                 </div>
                 <div className="text-muted" style={{ fontSize: "0.82rem" }}>
-                  Escalate from agent to admin. CSRF attacks on password changes, session manipulation, or direct JWT role tampering.
+                  Elevate privileges from standard user to administrative access level.
                 </div>
               </div>
               <div style={{ marginBottom: "0.5rem" }}>
                 <div style={{ color: "#ff2e2e", fontWeight: 600, marginBottom: "0.3rem" }}>
-                  STAGE 4: Command Execution
+                  STAGE 4: Final Objective
                 </div>
                 <div className="text-muted" style={{ fontSize: "0.82rem" }}>
-                  Exploit command injection with filter bypass. Final flag located at <code style={{ color: "#00ffc3" }}>/flag.txt</code>
+                  Achieve arbitrary command execution and retrieve the flag from the server.
                 </div>
               </div>
             </div>
@@ -62,26 +62,18 @@ export default function Home() {
 
           <div className="card">
             <div className="card-header">
-              <h3 className="card-title">Known Intelligence</h3>
-              <span className="card-tag">HINTS</span>
+              <h3 className="card-title">Mission Briefing</h3>
+              <span className="card-tag">CLASSIFIED</span>
             </div>
-            <div style={{ fontSize: "0.82rem" }}>
-              <div style={{ marginBottom: "0.8rem" }}>
-                <span style={{ color: "#ff6b6b" }}>▸</span> Admin account exists:{" "}
-                <code style={{ color: "#00ffc3" }}>dr.bright@scp.foundation</code>
-              </div>
-              <div style={{ marginBottom: "0.8rem" }}>
-                <span style={{ color: "#ff6b6b" }}>▸</span> JWT secret may be exposed in source code
-              </div>
-              <div style={{ marginBottom: "0.8rem" }}>
-                <span style={{ color: "#ff6b6b" }}>▸</span> CSRF protection is non-existent on admin endpoints
-              </div>
-              <div style={{ marginBottom: "0.8rem" }}>
-                <span style={{ color: "#ff6b6b" }}>▸</span> Command filters only block semicolons. Try: <code>&&</code>, <code>||</code>, <code>$IFS</code>, backticks
-              </div>
-              <div>
-                <span style={{ color: "#ff6b6b" }}>▸</span> SCP entity notes contain additional reconnaissance data
-              </div>
+            <div style={{ fontSize: "0.82rem", lineHeight: "1.6" }}>
+              <p className="text-muted">
+                Your task is to assess the security of this experimental entity tracking system. 
+                All identified vulnerabilities should be documented and exploited to demonstrate impact.
+              </p>
+              <p className="text-muted" style={{ marginTop: "0.8rem" }}>
+                Begin with reconnaissance. Examine the application behavior, inspect source code, 
+                and test authentication mechanisms. The final objective is command execution capability.
+              </p>
             </div>
           </div>
         </div>

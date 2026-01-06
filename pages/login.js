@@ -88,22 +88,12 @@ export default function Login() {
 
       <div className="card" style={{ marginTop: "1rem" }}>
         <div className="card-header">
-          <h3 className="card-title">Intelligence Notes</h3>
-          <span className="card-tag">RECON</span>
+          <h3 className="card-title">Security Notice</h3>
+          <span className="card-tag">INFO</span>
         </div>
         <div style={{ fontSize: "0.82rem", lineHeight: "1.6" }}>
-          <div className="text-muted" style={{ marginBottom: "0.6rem" }}>
-            <span style={{ color: "#ff6b6b" }}>▸</span> Known admin account:{" "}
-            <code style={{ color: "#00ffc3" }}>dr.bright@scp.foundation</code>
-          </div>
-          <div className="text-muted" style={{ marginBottom: "0.6rem" }}>
-            <span style={{ color: "#ff6b6b" }}>▸</span> Password logic includes unusual hash comparison (check API source)
-          </div>
-          <div className="text-muted" style={{ marginBottom: "0.6rem" }}>
-            <span style={{ color: "#ff6b6b" }}>▸</span> JWT tokens are stored in cookies and accessible via JavaScript
-          </div>
           <div className="text-muted">
-            <span style={{ color: "#ff6b6b" }}>▸</span> Consider timing attacks or email enumeration for reconnaissance
+            This system is undergoing security assessment. All activity is monitored and logged.
           </div>
         </div>
       </div>

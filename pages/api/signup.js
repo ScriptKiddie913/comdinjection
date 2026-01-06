@@ -43,6 +43,6 @@ export default function handler(req, res) {
   setTokenCookie(res, token);
 
   return res.status(201).json({
-    message: "Signup successful. Token set as cookie. Your role is 'agent' - inspect the JWT to see how roles work."
+    message: "Signup successful. Account created and authenticated."
   });
 }

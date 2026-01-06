@@ -92,21 +92,12 @@ export default function Signup() {
 
       <div className="card" style={{ marginTop: "1rem" }}>
         <div className="card-header">
-          <h3 className="card-title">Post-Registration Notes</h3>
-          <span className="card-tag">EXPLOITATION</span>
+          <h3 className="card-title">Registration Info</h3>
+          <span className="card-tag">INFO</span>
         </div>
         <div style={{ fontSize: "0.82rem", lineHeight: "1.6" }}>
-          <div className="text-muted" style={{ marginBottom: "0.6rem" }}>
-            <span style={{ color: "#ff6b6b" }}>▸</span> New accounts receive "agent" role by default
-          </div>
-          <div className="text-muted" style={{ marginBottom: "0.6rem" }}>
-            <span style={{ color: "#ff6b6b" }}>▸</span> JWT tokens are issued immediately and stored in cookies
-          </div>
-          <div className="text-muted" style={{ marginBottom: "0.6rem" }}>
-            <span style={{ color: "#ff6b6b" }}>▸</span> Token payload can be decoded (base64) - check for exploitable claims
-          </div>
           <div className="text-muted">
-            <span style={{ color: "#ff6b6b" }}>▸</span> Role escalation may be possible through token manipulation
+            New accounts are created with standard agent privileges. Account creation is immediate upon successful registration.
           </div>
         </div>
       </div>

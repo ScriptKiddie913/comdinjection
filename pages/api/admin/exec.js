@@ -13,7 +13,7 @@ export default function handler(req, res) {
   const decoded = unsafeDecode(token);
   if (!decoded || decoded.role !== "admin") {
     return res.status(403).json({ 
-      error: "Admin role required. Check your JWT token - maybe you can modify it?" 
+      error: "Admin role required for this operation." 
     });
   }
 
@@ -40,17 +40,11 @@ export default function handler(req, res) {
     if (err) {
       // VULN: Error output might contain command execution results
       return res.status(200).json({
-        output:
-          "Command executed with errors (useful for blind injection):\n" +
-          stdout +
-          "\n" +
-          stderr +
-          "\n\nTip: Try bypassing with &&, ||, backticks, or $IFS"
+        output: "Command executed with errors:\n" + stdout + "\n" + stderr
       });
     }
     return res.status(200).json({ 
-      output: stdout || stderr || "No output.",
-      hint: "Filter only blocks semicolons. Try: 127.0.0.1&&cat${IFS}/flag.txt"
+      output: stdout || stderr || "No output."
     });
   });
 }

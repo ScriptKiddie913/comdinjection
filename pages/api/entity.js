@@ -28,7 +28,7 @@ export default function handler(req, res) {
       notes || ""
     );
     return res.status(201).json({
-      message: "Entity created successfully. Check if role was verified...",
+      message: "Entity created successfully.",
       entity: ent
     });
   }

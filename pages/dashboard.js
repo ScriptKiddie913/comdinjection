@@ -222,26 +222,12 @@ export default function Dashboard() {
           {data.role !== "admin" && (
             <div className="card">
               <div className="card-header">
-                <h3 className="card-title">Privilege Escalation</h3>
-                <span className="card-tag">CHALLENGE</span>
+                <h3 className="card-title">Access Level</h3>
+                <span className="card-tag">AGENT</span>
               </div>
-              <p className="text-small text-muted" style={{ marginBottom: "0.6rem" }}>
-                You currently have <strong>agent</strong> clearance. Admin features are hidden but not inaccessible...
+              <p className="text-small text-muted">
+                Your current clearance level provides standard agent access. Additional features may be available with elevated privileges.
               </p>
-              <div style={{ fontSize: "0.78rem", lineHeight: "1.6" }}>
-                <div className="text-muted" style={{ marginBottom: "0.5rem" }}>
-                  <span style={{ color: "#ff6b6b" }}>▸</span> JWT tokens may be tampered with
-                </div>
-                <div className="text-muted" style={{ marginBottom: "0.5rem" }}>
-                  <span style={{ color: "#ff6b6b" }}>▸</span> Some endpoints use unsafe token decoding
-                </div>
-                <div className="text-muted" style={{ marginBottom: "0.5rem" }}>
-                  <span style={{ color: "#ff6b6b" }}>▸</span> CSRF attacks might change admin passwords
-                </div>
-                <div className="text-muted">
-                  <span style={{ color: "#ff6b6b" }}>▸</span> Try accessing <code>/admin/panel</code> directly
-                </div>
-              </div>
             </div>
           )}
         </div>
